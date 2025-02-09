@@ -1,3 +1,4 @@
+import 'package:ai_accento/frontend/UI/Firebase_Services/splash_services.dart';
 import 'package:ai_accento/utilities/themes.dart';
 import 'package:flutter/material.dart';
 
@@ -13,9 +14,16 @@ class _SplashScreenState extends State<SplashScreen>
   late AnimationController _animationController;
   late Animation<Offset> _slideAnimation;
 
+
+  // Timer from splash_services
+
+  SplashServices SplashScreen = SplashServices();
+
   @override
   void initState() {
     super.initState();
+
+    SplashScreen.isLogin(context);
 
     // creating a controller to control the animation
     _animationController =
@@ -33,12 +41,12 @@ class _SplashScreenState extends State<SplashScreen>
     _animationController.forward();
 
     // creating after 3 seconds, navigate to HomeScreen
-    Future.delayed(const Duration(seconds: 7), () {
-      // Navigator.pushReplacement(
-      //   context,
-      //   MaterialPageRoute(builder: (context) => const LoginPage()),
-      // );
-    });
+    // Future.delayed(const Duration(seconds: 7), () {
+    //   // Navigator.pushReplacement(
+    //   //   context,
+    //   //   MaterialPageRoute(builder: (context) => const LoginPage()),
+    //   // );
+    // });
   }
 
   // disposing the controller to freeup the system resources

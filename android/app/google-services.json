@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1037659375903",
+    "project_id": "ai-accento",
+    "storage_bucket": "ai-accento.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1037659375903:android:2318d9d632888e9ad4082a",
+        "android_client_info": {
+          "package_name": "com.fyp.ai_accento"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADid5Sv66xIByUXVyy4rIRcohbg9ijvNg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

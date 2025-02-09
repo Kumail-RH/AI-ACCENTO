@@ -1,8 +1,11 @@
-import 'package:ai_accento/frontend/UI/splash_screen.dart';
+import 'package:ai_accento/frontend/UI/auth/splash_screen.dart';
 import 'package:ai_accento/utilities/themes.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
@@ -14,7 +17,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'AI ACCENTO',
       theme: AppTheme.theme,
-      home: const SplashScreen(),
+      home: SplashScreen(),
     );
   }
 }
